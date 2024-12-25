@@ -1,0 +1,35 @@
+version: '3'
+services:
+  dev-deno-sailing-logbook:
+    image: denoland/deno:alpine-2.1.4
+    #container-name: dev-deno-wine-inventory
+    volumes: 
+      - $PWD/app:/app
+    ports:
+      - 9000:8003
+    environment:
+      #Deno environment
+      - D_ENVIRONMENT=${D_ENVIRONMENT}
+      # Session
+      - SESSION_STORAGE=${SESSION_STORAGE}
+      - SESSION_PREFIX=${SESSION_PREFIX}
+      - SESSION_TIMEOUT=${SESSION_TIMEOUT}
+      - APP_KEY=${APP_KEY}
+      # MongoDB
+      #- MONGODB_ENV=${MONGODB_ENV}
+      #- MONGODB_ENDPOINT=${MONGODB_ENDPOINT}
+      #- MONGODB_DATASOURCE=${MONGODB_DATASOURCE}
+      #- MONGODB_DATABASE=${MONGODB_DATABASE}
+      #- MONGODB_API_KEY=${MONGODB_API_KEY}
+      #Redis
+      #- REDIS_ENV=${REDIS_ENV}
+      #- REDIS_HOSTNAME_LABS=${REDIS_HOSTNAME_LABS}
+      #- REDIS_PORT_LABS=${REDIS_PORT_LABS}
+      #- REDIS_PASSWORD_LABS=${REDIS_PASSWORD_LABS}
+      #- REDIS_USERNAME_LABS=${REDIS_USERNAME_LABS}
+      #- REDIS_HOSTNAME_DS220=${REDIS_HOSTNAME_DS220}
+      #- REDIS_PORT_DS220=${REDIS_PORT_DS220}
+      #- REDIS_PASSWORD_DS220=${REDIS_PASSWORD_DS220}
+    tty: true
+    stdin_open: true
+    command: sh
