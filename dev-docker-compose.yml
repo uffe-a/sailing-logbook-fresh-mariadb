@@ -1,12 +1,13 @@
 version: '3'
 services:
   dev-deno-sailing-logbook:
+    #image: denoland/deno:alpine-1.46.3
     image: denoland/deno:alpine-2.1.4
     #container-name: dev-deno-wine-inventory
     volumes: 
       - $PWD/app:/app
     ports:
-      - 9000:8003
+      - 9000:8000
     environment:
       #Deno environment
       - D_ENVIRONMENT=${D_ENVIRONMENT}
