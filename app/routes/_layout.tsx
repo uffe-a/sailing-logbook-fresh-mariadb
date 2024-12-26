@@ -1,14 +1,19 @@
-import { Stack } from "rfui";
-import { Navbar } from "@/components/layout/navbar.tsx";
+import { 
+	Stack,
+	Container 
+} from "rfui";
+
 
 export default ({ Component, route }: PageProps) => {
 	return (
-		<Stack class="min-h-screen">
-			<Navbar route={route} />
-			<div>
-				<Component />
-			</div>
-			<div>bottom</div>
-		</Stack>
+		<Container class="bg-neutral-50">	
+			<Stack class="min-h-screen">
+				<div>top</div>
+				<div>
+					<Component />
+				</div>
+				<div>bottom</div>
+			</Stack>
+		</Container>
 	);
 };
