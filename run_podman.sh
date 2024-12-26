@@ -6,8 +6,8 @@ set +a
 
 echo "Environmental variables set"
 
-podman-compose -p dev-wine-inventory -f dev-docker-compose.yml up -d
-podman exec -it dev-wine-inventory_dev-deno-wine-inventory_1 sh
+podman-compose -p dev-sailing-logbook -f dev-docker-compose.yml up -d
+podman exec -it dev-sailing-logbook-dev-deno-sailing-logbook-1 sh
 
 #cd app
 #deno task start
