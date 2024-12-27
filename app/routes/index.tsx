@@ -4,14 +4,15 @@ import {
   FormField,
   Stack,
   Button,
-  Card, CardHeader, CardBody
+  Card, CardHeader, CardBody,
+  Link
 } from "rfui";
 
 export default function Login() {
   return (
     <div>
       <Card>
-        <CardHeader>Sailing Logbook</CardHeader>
+        <CardHeader>Sailing Logbook (<Link href="/sessions/">Sessions</Link>)</CardHeader>
         <CardBody>
           <Stack>
             <FormField label="Name" type="text" />
